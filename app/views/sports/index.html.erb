@@ -1,0 +1,14 @@
+
+<% @sports.each do |sport| %>
+  <div>
+    <h1><%= sport.name %></h1><br />
+    <i><%= sport.team %></i><br />
+    <p><%= sport.city %></p><br />
+  </div>
+
+  <hr />
+<% end %>
+
+
+
+<%= image_tag 'coding.jpg', class: 'img-fluid' %>

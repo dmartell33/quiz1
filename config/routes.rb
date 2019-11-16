@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root 'titles#index'
+  root 'sports#index'
 end
