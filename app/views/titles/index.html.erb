@@ -1,6 +1,15 @@
-<h1>My Quiz 1 App!!</h1>
+<h1><%= @sports.inspect %></h1>
+
+<% @places.each do |place| %>
+  <div>
+    <h1><%= place.name %></h1><br />
+    <i><%= place.address %></i><br />
+    <p><%= place.description %></p><br />
+  </div>
+
+  <hr />
+<% end %>
 
 
-<p>Welcome to week 13 of the Arizona Coding Bootcamp</p>
 
 <%= image_tag 'coding.jpg', class: 'img-fluid' %>
