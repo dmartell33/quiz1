@@ -1,8 +1,8 @@
 
 <% @sports.each do |sport| %>
-  <div>
-    <h1><%= sport.name %></h1><br />
-    <i><%= sport.team %></i><br />
+  <div class="booyah-box col-10 offset-1">
+    <h1><%= sport.name %></h1>
+    <i><%= sport.team %></i><br /><br />
     <p><%= sport.city %></p><br />
   </div>
 
@@ -11,4 +11,3 @@
 
 
 
-<%= image_tag 'coding.jpg', class: 'img-fluid' %>
