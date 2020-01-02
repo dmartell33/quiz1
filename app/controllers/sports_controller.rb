@@ -1,5 +1,5 @@
 class SportsController < ApplicationController
-  before_action :authenticate_user!, only: [:new] 
+  before_action :authenticate_user!, only: [:new, :create] 
 
   def index
     @sports = Sport.all
@@ -10,7 +10,7 @@ class SportsController < ApplicationController
   end
   
   def create
-    Sport.create(sport_params)
+    current_user.places.create(place_params)
     redirect_to root_path
   end
 

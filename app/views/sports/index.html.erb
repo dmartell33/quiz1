@@ -4,6 +4,33 @@
     <h1><%= sport.name %></h1>
     <i><%= sport.team %></i><br /><br />
     <p><%= sport.city %></p><br />
+
+    <% if sport.user.present? %>
+      <small><%= sport.user.email %></small>
+    <% end %>
+
+  <% if sport.comments.present? %>
+
+  <div class="col-12">
+      
+      <blockquote>
+        <% if sport.comments.last.humanized_rating.present? %>
+          <b><%= sport.comments.last.humanized_rating %></b> -
+        <% end %>
+        <%= sport.comments.last.message %>
+        <small><%= sport.comments.last.user.email %></small>
+      </blockquote>
+    </div>
+  <% end %>
+</div>
+
+
+   <% end %>
+  <br />
+
+  
+  <%= will_paginate @places %>
+
   </div>
 
   <hr />
