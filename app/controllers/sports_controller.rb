@@ -1,5 +1,5 @@
 class SportsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit]
+  before_action :authenticate_user!, only: [:new] 
 
   def index
     @sports = Sport.all
